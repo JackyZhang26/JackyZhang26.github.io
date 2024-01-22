@@ -20,19 +20,17 @@
     var CONFIG = {"hostname":"jackyzhang26.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="题目  By looking through a single water droplet placed on a glass surface, one can observe that the droplet acts as an imaging system. Investigate the magnification and resolution of such a lens.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Droplet Microscope实验记录">
-<meta property="og:url" content="https://jackyzhang26.github.io/2024/01/22/2024-1-21-DropletMicroscope/index.html">
+  <meta name="description" content="宁拙勿巧，宁朴勿华。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jacky Zhang的博客">
+<meta property="og:url" content="https://jackyzhang26.github.io/tags/CUPT/index.html">
 <meta property="og:site_name" content="Jacky Zhang的博客">
-<meta property="og:description" content="题目  By looking through a single water droplet placed on a glass surface, one can observe that the droplet acts as an imaging system. Investigate the magnification and resolution of such a lens.">
+<meta property="og:description" content="宁拙勿巧，宁朴勿华。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-22T13:56:00.589Z">
-<meta property="article:modified_time" content="2024-01-22T13:58:37.689Z">
 <meta property="article:author" content="Jacky Zhang">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://jackyzhang26.github.io/2024/01/22/2024-1-21-DropletMicroscope/">
+<link rel="canonical" href="https://jackyzhang26.github.io/tags/CUPT/">
 
 
 <script id="page-configurations">
@@ -40,12 +38,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Droplet Microscope实验记录 | Jacky Zhang的博客</title>
+  <title>标签: CUPT | Jacky Zhang的博客</title>
   
 
 
@@ -148,97 +146,71 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content tag">
             
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://jackyzhang26.github.io/2024/01/22/2024-1-21-DropletMicroscope/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jacky Zhang">
-      <meta itemprop="description" content="宁拙勿巧，宁朴勿华。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jacky Zhang的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Droplet Microscope实验记录
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-22 21:56:00 / 修改时间：21:58:37" itemprop="dateCreated datePublished" datetime="2024-01-22T21:56:00+08:00">2024-01-22</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">CUPT
+          <small>标签</small>
+        </h2>
+      </div>
 
       
-        <h2 id="题目">题目</h2>
-<blockquote>
-<p>By looking through a single water droplet placed on a glass surface,
-one can observe that the droplet acts as an imaging system. Investigate
-the magnification and resolution of such a lens.</p>
-</blockquote>
-<blockquote>
-<p>通过观察放置在玻璃表面上的单个水滴，人们可以观察到水滴充当成像系统。探究这样一个透镜的放大倍数和分辨率。</p>
-</blockquote>
-<h2 id="理论">理论</h2>
-<p>水滴形状参考"Making sessile drops
-easier"使用的微分方程方法计算。(该部分mathematica代码参考上述文章完成)需要的参数有：
-- 水的密度 - 重力加速度 - 水的表面张力系数 - 水和玻璃的接触角</p>
-<p>由形状可计算出傍轴曲率半径，进而计算出焦距和像差。
-(该部分mathematica代码由笔者自主完成) ## 实验 ### 水滴的形状
-实际上可以通过接触角仪测得。 ### 焦距 - 用目视显微镜可以测量 -
-也可以采用"Talbot intcrtrometry and ray tracing"方法 #### 目视显微镜法
-参考助教提供的方案。 #### "Talbot intcrtrometry and ray tracing"方法
-需要的仪器： - 准直的单色光源 - 光栅*2 - CCD相机和计算机 - 游标卡尺</p>
-<p>(待完成，文献啃不动了) ### 分辨率
-实际上可以由分辨率板衡量，参考助教提供的方案。</p>
-
+    <div class="collection-year">
+      <span class="collection-header">2024</span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-      <footer class="post-footer">
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2024-01-22T21:56:00+08:00"
+              content="2024-01-22">
+          01-22
+        </time>
+      </div>
 
-        
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/01/22/JuicySolarCell/" itemprop="url">
+            <span itemprop="name">Juicy Solar Cell实验记录</span>
+          </a>
+      </div>
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item"></div>
-      <div class="post-nav-item">
-    <a href="/2024/01/22/2024-1-21-JuicySolarCell/" rel="next" title="Juicy Solar Cell实验记录">
-      Juicy Solar Cell实验记录 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+    </header>
   </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2024-01-22T21:56:00+08:00"
+              content="2024-01-22">
+          01-22
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/01/22/DropletMicroscope/" itemprop="url">
+            <span itemprop="name">Droplet Microscope实验记录</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
@@ -291,7 +263,6 @@ easier"使用的微分方程方法计算。(该部分mathematica代码参考上�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%90%86%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">理论</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -308,6 +279,10 @@ easier"使用的微分方程方法计算。(该部分mathematica代码参考上�
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
