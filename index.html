@@ -79,10 +79,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-2024-1-21-JuicySolarCell" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/01/22/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-01-22T07:27:29.808Z" itemprop="datePublished">2024-01-22</time>
+    <a href="/2024/01/22/2024-1-21-JuicySolarCell/" class="article-date">
+  <time class="dt-published" datetime="2024-01-22T13:56:00.597Z" itemprop="datePublished">2024-01-22</time>
 </a>
     
   </div>
@@ -93,7 +93,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/01/22/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/2024/01/22/2024-1-21-JuicySolarCell/">Juicy Solar Cell实验记录</a>
     </h1>
   
 
@@ -101,24 +101,499 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <h2 id="题目">题目</h2>
+<blockquote>
+<p>A functional solar cell can be created using conducting glass slides,
+iodine, juice (eg.blackberry) and titanium dioxide. This type of cell is
+called a Grätzel cell. Make such a cell and investigate the necessary
+parameters to obtain maximum efficiency.</p>
+</blockquote>
+<blockquote>
+<p>可以使用导电玻璃片、碘、果汁（例如黑莓）和二氧化钛来制造功能太阳能电池。这种电池被称为Grätzel电池。制造这样一个电池，并调查获得最大效率所需的参数。</p>
+</blockquote>
+<h2 id="原理">原理</h2>
+<blockquote>
+<ol type="1">
+<li>The process starts at the working electrode when thesensitising dye
+(i.e. the raspberry juice bound to the <span
+class="math inline">\(TiO_2\)</span> layer) absorbs sunlight. The energy
+from the lightallows the raspberry dye to excite an electron to a higher
+energy level.</li>
+<li>From the excited state, the electron is injected into the <span
+class="math inline">\(TiO_2\)</span> semiconductor.</li>
+<li>The electron travels around the circuit to the counter electrode,
+powering an external load</li>
+<li>Sustained conversion of light energy is facilitated by regeneration
+of the reduced sensitising dye by the reversible redox couple (O/R)
+<span class="math inline">\((I_3^-/I^−)\)</span>(electrolyte).</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol type="1">
+<li>该过程从工作电极开始，当增敏染料(即附着在二氧化钛层的覆盆子汁液)吸收阳光，来自光的能量使覆盆子染料激发一个电子到一个更高的能级。</li>
+<li>从激发态开始，电子被注入到二氧化钛半导体中。</li>
+<li>电子绕着电路传播到对电极，为外部负载供电</li>
+<li>通过可逆氧化还原偶联<span
+class="math inline">\(I^3_−/I^−\)</span>电解质对还原的增敏染料的再生，促进了光能的持续转化</li>
+</ol>
+</blockquote>
+<h2 id="初步调查和实验">初步调查和实验</h2>
+<h3 id="可能的影响因素和探究方法">可能的影响因素和探究方法</h3>
+<ul>
+<li>受光面积</li>
+<li>染料种类(果汁种类，对不同波长的光吸收不同)</li>
+<li>光源光谱(不同波长所占的比例)</li>
+<li>光强</li>
+<li>碘电解质浓度</li>
+<li>纳米二氧化钛颗粒直径(可能影响染料附着与光的吸收)</li>
+</ul>
+<h4 id="染料种类">染料种类</h4>
+<blockquote>
+<p>The raspberry dye molecules belong to a group called anthocyanin
+molecules which have the basic structure shown here. The R groups are
+typically hydrogens, alcohol groups or ester groups. These last two help
+the dye bind to a semiconductor. The aromatic rings in the structure are
+responsible for the strong colour of the dye.</p>
+</blockquote>
+<blockquote>
+<p>树莓染料分子叫做花青素分子，其基本结构如图所示。其R基团通常是氢，羟基或酯基。后二者可以帮助染料结合到半导体上。该结构中的芳香环使染料具有强烈颜色。</p>
+</blockquote>
+<p>显然，<del>使用具有和芳香环吸收光谱重合度较高的光源可以使光电转化效率更高</del>，使用和太阳光谱重合度更高的染料可使光电转化效率更高(此处修改原因参见“正式实验”部分)；并且R基团羟基和酯基越多，分子与半导体结合越紧密，光电转化效率越高。</p>
+<p>可以调查各种不同果汁里花青素分子结合能力与吸收光谱的差别。</p>
+<p>吸收光谱需要用到UV-vis光谱仪测量吸收光谱；结合能力较为复杂，需要较多有机化学知识，可以参考相关文献的数据。
+#### 受光面积 对比实验，控制涂覆二氧化钛的面积即可。</p>
+<h4 id="光强">光强</h4>
+<p>传统方法是光强计+万用表读数。</p>
+<p>笔者准备利用ESP32+光强传感器+ADC模块设计一个设备，同时实时检测光强和电压，传输到计算机。示意图如下：
+#### 光源光谱
+对比实验，可以用单色仪测量光源频谱，也可以直接选用同光强、不同频率的单色光光源分别照射，探究电压变化。</p>
+<h4 id="碘电解质浓度">碘电解质浓度</h4>
+<p>对比实验，分别用不同浓度碘液做电解质进行测试。</p>
+<h4 id="纳米二氧化钛颗粒直径">纳米二氧化钛颗粒直径</h4>
+<p>二氧化钛直径会影响光催化效率，也会影响和花青素分子的结合程度，需要重点考察。
+对比实验，分别用不同直径二氧化钛进行测试。</p>
+<h3 id="实验结果">实验结果</h3>
+<h2 id="正式实验">正式实验</h2>
+<h3 id="测量什么">测量什么？</h3>
+<ol type="1">
+<li><del>太阳能电池的暗伏安特性测量</del>(没必要测量)</li>
+<li>测量太阳能电池的开路电压和光强之间的关系</li>
+<li>测量太阳能电池的短路电流和光强之间的关系</li>
+<li>太阳能电池的输出特性测量 参考<a
+target="_blank" rel="noopener" href="http://pems.ustc.edu.cn/uploads/project/20230320/6789300dd0e493fc49f16a319654773d.pdf">太阳能电池特性实验</a></li>
+</ol>
+<h3 id="用什么测">用什么测？</h3>
+<p>1409实验室有太阳能电池特性测量仪器可以借来使用。</p>
+<h3 id="无关变量始终不变的量">无关变量（始终不变的量）</h3>
+<ul>
+<li>光源 （先否定一个前面的想法） 既然实验是要做一个Solar
+Cell，那么就不必拿单色光分别测试了，就用模拟太阳光谱的碘钨灯做光源。
+也就是说，要寻找更贴近太阳光谱的果汁，而不是让光源贴近果汁的光谱。</li>
+<li>导电玻璃片的状况 找一批状况相同的新玻璃片。</li>
+<li>石墨电极的状况 尽量每次涂石墨胶涂的一样多。</li>
+<li>二氧化钛层的状况 尽量每次涂同样多二氧化钛，烤同样长时间。</li>
+<li>温度
+电池表面的温度并不容易准确改变，所以就控制实验环境基本恒温就好了。
+（实际上温度的确会有较大影响，如果想要把这个列为变量，我们可以找一个恒温箱，在里面测试光电池。但是这种尺寸的恒温箱也不好找，故暂且放弃）</li>
+<li>光电池的受光面积
+理论上来说这个光电转化效率应该和面积没啥关系，而且我们的玻璃片大小也有限，只靠改变涂二氧化钛的面积来控制受光面积，能获取的数据太少了，研究价值不大。
+（如果想测其实也可以，用黑纸挡光改变面积。）
+所以我们就尽量控制不同的光电池面积一致。</li>
+</ul>
+<h3 id="变量">变量</h3>
+<ul>
+<li>果汁种类
+目前只有一种，可以让助教多准备点其他种类，蓝莓树莓桑葚黑莓蔓越莓葡萄都整点，都测一测光谱（毕竟我也不知道他们的吸收峰一样不一样）<del>甚至可以整几瓶葡萄酒，等待时间小酌一杯？</del>
+这里我们需要注意，果汁种类不同，其中的花青素分子有差异，即使吸收谱差不多，带的R基官能团却是不一样的，而这会影响它和二氧化钛颗粒的结合效果，也就是电子转移效果。</li>
+<li>染色时间
+要做这个耗时就长了，比如染24h的，12h的，6h的，3h的，1h的，30min的。</li>
+<li>二氧化钛直径
+<del>但是目前实验室只有那一种，可以联系助教整点其他规格的</del>(已到货)</li>
+<li>碘液浓度
+自己稀释就好了，<del>但还需要让助教多准备点量筒烧杯啥的</del></li>
+</ul>
+<h3 id="具体怎么控制变量">具体怎么控制变量？</h3>
+<p>在改变一组变量时，控制其他变量以及无关变量不变，做出多组不同的电池来，然后拿着这些一组一组的电池去测量上述的待测量，把每个电池的特性都测出来。</p>
+<h3 id="要做的测试">要做的测试</h3>
+<h4
+id="测试1二氧化钛直径对光电效率的影响">测试1：二氧化钛直径对光电效率的影响</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">染色时间</th>
+<th style="text-align: center;">碘液浓度</th>
+<th style="text-align: center;">果汁种类</th>
+<th style="text-align: center;">室温</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1h</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">蔓越莓</td>
+<td style="text-align: center;">20<span
+class="math inline">\(\degree\)</span>C</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">二氧化钛直径</th>
+<th style="text-align: center;">暗伏安特性</th>
+<th style="text-align: center;">开路电压</th>
+<th style="text-align: center;">短路电流</th>
+<th style="text-align: center;">输出特性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>5-10nm(锐钛)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>21nm(P25)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>30nm(未知晶型)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>40nm(锐钛)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>60nm(锐钛)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>100nm(锐钛)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td
+style="text-align: center;"><strong>非纳米尺度(未知晶型)</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h4
+id="测试2果汁种类对光电效率的影响">测试2：果汁种类对光电效率的影响</h4>
+<p>在进行对比实验前，可以测一下各种果汁的吸收峰。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">染色时间</th>
+<th style="text-align: center;">碘液浓度</th>
+<th style="text-align: center;">二氧化钛直径</th>
+<th style="text-align: center;">室温</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1h</td>
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">21nm</td>
+<td style="text-align: center;">20<span
+class="math inline">\(\degree\)</span>C</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">果汁种类</th>
+<th style="text-align: center;">暗伏安特性</th>
+<th style="text-align: center;">开路电压</th>
+<th style="text-align: center;">短路电流</th>
+<th style="text-align: center;">输出特性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>蓝莓</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>蔓越莓</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><em>至此，工作量其实已经不小了</em>
+<em>以下变量探究可能不是重点或耗时太长，暂且可以搁置</em></p>
+<h4
+id="测试3碘液浓度对光电效率的影响">测试3：碘液浓度对光电效率的影响</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">染色时间</th>
+<th style="text-align: center;">果汁种类</th>
+<th style="text-align: center;">二氧化钛直径</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1h</td>
+<td style="text-align: center;">蔓越莓</td>
+<td style="text-align: center;">21nm</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">碘液浓度</th>
+<th style="text-align: center;">暗伏安特性</th>
+<th style="text-align: center;">开路电压</th>
+<th style="text-align: center;">短路电流</th>
+<th style="text-align: center;">输出特性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>10%</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>5%</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>2.5%</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>1%</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h4
+id="测试4染色时间对光电效率的影响">测试4：染色时间对光电效率的影响</h4>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">碘液浓度</th>
+<th style="text-align: center;">果汁种类</th>
+<th style="text-align: center;">二氧化钛直径</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">10%</td>
+<td style="text-align: center;">蔓越莓</td>
+<td style="text-align: center;">21nm</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">染色时间</th>
+<th style="text-align: center;">暗伏安特性</th>
+<th style="text-align: center;">开路电压</th>
+<th style="text-align: center;">短路电流</th>
+<th style="text-align: center;">输出特性</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>30min</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>1h</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>3h</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>6h</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>12h</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>24h</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="正式实验遇到的问题以及改进">正式实验遇到的问题以及改进</h3>
+<ol start="0" type="1">
+<li>测量光功率不是必须的，我们只需测出开路电压和短路电流，算出填充因子，即可判定电池的效率差异。(感谢王中平老师指正)</li>
+<li>颗粒直径不同的二氧化钛粉末密度差别较大，具体表现为颗粒直径越小的二氧化钛粉末密度越小，因此控制“水-醋酸-洗洁精-二氧化钛分散系”的质量浓度会导致颗粒数浓度差别较大，在涂抹玻璃片时的表现为有的已经非常浓，有的还非常稀薄。<br />
+<strong>改进方案</strong>：可以控制体积分数，比如用药匙粗略定量。</li>
+<li>二氧化钛浓度太大导致最后涂层过厚，降低了二氧化钛在玻璃上的附着度，明显降低了电池的效率。<br />
+<strong>改进方案</strong>：配二氧化钛悬浊液时尽量降低浓度到一个适宜的范围<br />
+<strong>启发</strong>：二氧化钛层厚度也是一个重要的变量，但是需要找到合适的加工或测量工具定量改变涂层厚度或测出涂层厚度。</li>
+<li>“太阳能电池特性实验”所测试的电池是更加成熟的硅光电池，能够产生的电压足够高，因此使用的电表分度很大，大概在100mV量级，无法测量我们所能做出的10mV量级的电池。<br />
+<strong>改进方案</strong>：自己搭建电路</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th>所需仪器</th>
+<th>数目</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>KEITHLEY 2000多用电表</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>6位电阻箱</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>导线</td>
+<td>若干</td>
+</tr>
+</tbody>
+</table>
+<p>实际上直接测出通过负载的电流是很困难的，因为该电池电压极低(<span
+class="math inline">\(10^{-1}-10^1mV\)</span>量级)而内阻极大(<span
+class="math inline">\(10^2-10^3\Omega\)</span>量级)，电流已经接近KEITHLEY
+2000的最小分度，因此不用电表直接测电流。 测电流的替代方法： -
+测量短路电流用测量内阻替代 - 测量输出特性的电流用电阻箱读数替代</p>
+<p>此外，我利用KEITHLEY
+2000的串口功能，写了一个Labview程序，大大简化了读取数据的过程。</p>
+<ol start="4" type="1">
+<li>碘钨灯的发热是很明显的，温度改变会大大改变电池电解质的电迁移速率以及二氧化钛的光催化效率，我们观察到的现象为：随着照射升温，电池的电压从0.05mV一路上升至0.2mV左右，不能保持稳定。因此实验台上近距离照射的碘钨灯不能作为光源使用。<br />
+<strong>解决方案</strong>：借来了带有水平导轨的横向碘钨灯，可以将电池放在距离光源较远的位置，这样可以大大减小热效应。</li>
+<li>放置一段时间后，电池两极之间的碘液就已蒸发殆尽了，这必然会影响电池效率，我们观察到的现象为：4中的同一个电池，在碘钨灯照射一段时间后，电压急剧下降，检查发现此时碘液已经几乎烤干了。<br />
+<strong>解决方案</strong>：用胶将组装好的电池边缘封装起来，这样不仅能保持碘液不因蒸发导致浓度变化，也可以使电池使用时间更长。(目前还没有实践)</li>
+<li>鳄鱼夹与导电玻璃之间的电气连接并不可靠，接触部位电阻可能会比较大，并且夹子的移动会显著影响电压测量的准确性。<br />
+<strong>解决方案</strong>：可以寻找玻璃上蚀刻并引出金属电极的工艺，但这已经远远超出本题的范畴了。折中的解决方案使在夹持接触部位涂上导电石墨胶，以确保连接稳定性。</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jackyzhang26.github.io/2024/01/22/hello-world/" data-id="clroxsvqb0000wknc25pudhmr" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://jackyzhang26.github.io/2024/01/22/2024-1-21-JuicySolarCell/" data-id="clrp03q0o0001o0nc8dpx9z2d" data-title="Juicy Solar Cell实验记录" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2024-1-21-DropletMicroscope" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/22/2024-1-21-DropletMicroscope/" class="article-date">
+  <time class="dt-published" datetime="2024-01-22T13:56:00.589Z" itemprop="datePublished">2024-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/01/22/2024-1-21-DropletMicroscope/">Droplet Microscope实验记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="题目">题目</h2>
+<blockquote>
+<p>By looking through a single water droplet placed on a glass surface,
+one can observe that the droplet acts as an imaging system. Investigate
+the magnification and resolution of such a lens.</p>
+</blockquote>
+<blockquote>
+<p>通过观察放置在玻璃表面上的单个水滴，人们可以观察到水滴充当成像系统。探究这样一个透镜的放大倍数和分辨率。</p>
+</blockquote>
+<h2 id="理论">理论</h2>
+<p>水滴形状参考"Making sessile drops
+easier"使用的微分方程方法计算。(该部分mathematica代码参考上述文章完成)需要的参数有：
+- 水的密度 - 重力加速度 - 水的表面张力系数 - 水和玻璃的接触角</p>
+<p>由形状可计算出傍轴曲率半径，进而计算出焦距和像差。
+(该部分mathematica代码由笔者自主完成) ## 实验 ### 水滴的形状
+实际上可以通过接触角仪测得。 ### 焦距 - 用目视显微镜可以测量 -
+也可以采用"Talbot intcrtrometry and ray tracing"方法 #### 目视显微镜法
+参考助教提供的方案。 #### "Talbot intcrtrometry and ray tracing"方法
+需要的仪器： - 准直的单色光源 - 光栅*2 - CCD相机和计算机 - 游标卡尺</p>
+<p>(待完成，文献啃不动了) ### 分辨率
+实际上可以由分辨率板衡量，参考助教提供的方案。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jackyzhang26.github.io/2024/01/22/2024-1-21-DropletMicroscope/" data-id="clrp03q0k0000o0ncfvgeh7hl" data-title="Droplet Microscope实验记录" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -161,7 +636,11 @@
       <ul>
         
           <li>
-            <a href="/2024/01/22/hello-world/">Hello World</a>
+            <a href="/2024/01/22/2024-1-21-JuicySolarCell/">Juicy Solar Cell实验记录</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/22/2024-1-21-DropletMicroscope/">Droplet Microscope实验记录</a>
           </li>
         
       </ul>
