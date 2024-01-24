@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+
+<html theme="dark" showBanner="true" hasBanner="true" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta charset="utf-8">
+  
+  
+  
 
-<link rel="stylesheet" href="/css/main.css">
+  
+  <title>Juicy Solar Cell实验记录 | Jacky Zhang的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"jackyzhang26.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <meta name="description" content="题目  A functional solar cell can be created using conducting glass slides, iodine, juice (eg.blackberry) and titanium dioxide. This type of cell is called a Grätzel cell. Make such a cell and inves">
 <meta property="og:type" content="article">
@@ -28,183 +28,306 @@
 <meta property="og:description" content="题目  A functional solar cell can be created using conducting glass slides, iodine, juice (eg.blackberry) and titanium dioxide. This type of cell is called a Grätzel cell. Make such a cell and inves">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-22T13:56:00.597Z">
-<meta property="article:modified_time" content="2024-01-22T15:16:16.724Z">
+<meta property="article:modified_time" content="2024-01-24T15:27:50.685Z">
 <meta property="article:author" content="Jacky Zhang">
 <meta property="article:tag" content="CUPT">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://jackyzhang26.github.io/2024/01/22/JuicySolarCell/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>Juicy Solar Cell实验记录 | Jacky Zhang的博客</title>
   
+    <link rel="alternate" href="/atom.xml" title="Jacky Zhang的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/%5Bobject%20Object%5D">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
 
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
 
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
 
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
 
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --></head>
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
 
-  <div class="site-meta">
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
 
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Jacky Zhang的博客</h1>
-      <span class="logo-line-after"><i></i></span>
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body>
+  
+  
+    
+<div id="banner" class="">
+  <img src="https://apod.nasa.gov/apod/image/2401/GrivolaMoon_Micon_1600.jpg" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>Jacky Zhang的博客 </div>
     </a>
-      <p class="site-subtitle" itemprop="description">Jacky Zhang's Blog</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/tags">Tags</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/tags">Tags</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/pic/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">Jacky Zhang </div>
+      <div class="dot"></div>
+      <div class="subtitle">Jacky Zhang's Blog </div>
+      <div class="link-list">
+        
+          <a class="link-btn" href="jackyzhang26@outlook.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com/JackyZh41034072" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561199034473914/" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/jackyzhang26" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://instagram.com/jackyzhang64" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+         
+      </div>  
     </div>
   </div>
 </div>
 
+  
+  <div class="sticky">
+    
+      
 
 
-
-<nav class="site-nav">
-  <ul id="menu" class="menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/CUPT/" rel="tag">CUPT</a></li></ul>
+    </div>
   </div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
 
-          <div class="content post posts-expand">
-            
 
+<article id="post-JuicySolarCell" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        Juicy Solar Cell实验记录
+      </h1>
     
   
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-01-22T13:56:00.597Z" itemprop="datePublished">2024-01-22</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://jackyzhang26.github.io/2024/01/22/JuicySolarCell/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jacky Zhang">
-      <meta itemprop="description" content="宁拙勿巧，宁朴勿华。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jacky Zhang的博客">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Juicy Solar Cell实验记录
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-22 21:56:00 / 修改时间：23:16:16" itemprop="dateCreated datePublished" datetime="2024-01-22T21:56:00+08:00">2024-01-22</time>
-            </span>
-
-          
-
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            4.3k 词 
+          </div>
         </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CUPT/" rel="tag">CUPT</a></li></ul>
+
       </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <h2 id="题目">题目</h2>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h2 id="题目">题目</h2>
 <blockquote>
 <p>A functional solar cell can be created using conducting glass slides,
 iodine, juice (eg.blackberry) and titanium dioxide. This type of cell is
@@ -218,17 +341,15 @@ parameters to obtain maximum efficiency.</p>
 <blockquote>
 <ol type="1">
 <li>The process starts at the working electrode when thesensitising dye
-(i.e. the raspberry juice bound to the <span
-class="math inline">\(TiO_2\)</span> layer) absorbs sunlight. The energy
+(i.e. the raspberry juice bound to the <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="5.087ex" height="1.932ex" role="img" focusable="false" viewBox="0 -704 2248.6 854"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mi" transform="translate(704,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="msub" transform="translate(1049,0)"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mn" transform="translate(796,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></span> layer) absorbs sunlight. The energy
 from the lightallows the raspberry dye to excite an electron to a higher
 energy level.</li>
-<li>From the excited state, the electron is injected into the <span
-class="math inline">\(TiO_2\)</span> semiconductor.</li>
+<li>From the excited state, the electron is injected into the <span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="5.087ex" height="1.932ex" role="img" focusable="false" viewBox="0 -704 2248.6 854"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D447" d="M40 437Q21 437 21 445Q21 450 37 501T71 602L88 651Q93 669 101 677H569H659Q691 677 697 676T704 667Q704 661 687 553T668 444Q668 437 649 437Q640 437 637 437T631 442L629 445Q629 451 635 490T641 551Q641 586 628 604T573 629Q568 630 515 631Q469 631 457 630T439 622Q438 621 368 343T298 60Q298 48 386 46Q418 46 427 45T436 36Q436 31 433 22Q429 4 424 1L422 0Q419 0 415 0Q410 0 363 1T228 2Q99 2 64 0H49Q43 6 43 9T45 27Q49 40 55 46H83H94Q174 46 189 55Q190 56 191 56Q196 59 201 76T241 233Q258 301 269 344Q339 619 339 625Q339 630 310 630H279Q212 630 191 624Q146 614 121 583T67 467Q60 445 57 441T43 437H40Z"></path></g><g data-mml-node="mi" transform="translate(704,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="msub" transform="translate(1049,0)"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mn" transform="translate(796,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg></mjx-container></span> semiconductor.</li>
 <li>The electron travels around the circuit to the counter electrode,
 powering an external load</li>
 <li>Sustained conversion of light energy is facilitated by regeneration
 of the reduced sensitising dye by the reversible redox couple (O/R)
-<span class="math inline">\((I_3^-/I^−)\)</span>(electrolyte).</li>
+<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.706ex;" xmlns="http://www.w3.org/2000/svg" width="8.278ex" height="2.57ex" role="img" focusable="false" viewBox="0 -823.8 3658.7 1136"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msubsup" transform="translate(389,0)"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mo" transform="translate(590.2,411.6) scale(0.707)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(473,-296.6) scale(0.707)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1579.3,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="msup" transform="translate(2079.3,0)"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mo" transform="translate(590.2,363) scale(0.707)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g></g><g data-mml-node="mo" transform="translate(3269.7,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></span>(electrolyte).</li>
 </ol>
 </blockquote>
 <blockquote>
@@ -236,8 +357,7 @@ of the reduced sensitising dye by the reversible redox couple (O/R)
 <li>该过程从工作电极开始，当增敏染料(即附着在二氧化钛层的覆盆子汁液)吸收阳光，来自光的能量使覆盆子染料激发一个电子到一个更高的能级。</li>
 <li>从激发态开始，电子被注入到二氧化钛半导体中。</li>
 <li>电子绕着电路传播到对电极，为外部负载供电</li>
-<li>通过可逆氧化还原偶联<span
-class="math inline">\(I^3_−/I^−\)</span>电解质对还原的增敏染料的再生，促进了光能的持续转化</li>
+<li>通过可逆氧化还原偶联<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.69ex;" xmlns="http://www.w3.org/2000/svg" width="6.252ex" height="2.575ex" role="img" focusable="false" viewBox="0 -833.2 2763.5 1138.2"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msubsup"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mn" transform="translate(590.2,363) scale(0.707)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g><g data-mml-node="mo" transform="translate(473,-247) scale(0.707)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(1073.1,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="msup" transform="translate(1573.1,0)"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g><g data-mml-node="mo" transform="translate(590.2,363) scale(0.707)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g></g></g></g></svg></mjx-container></span>电解质对还原的增敏染料的再生，促进了光能的持续转化</li>
 </ol>
 </blockquote>
 <h2 id="初步调查和实验">初步调查和实验</h2>
@@ -283,8 +403,7 @@ responsible for the strong colour of the dye.</p>
 <li><del>太阳能电池的暗伏安特性测量</del>(没必要测量)</li>
 <li>测量太阳能电池的开路电压和光强之间的关系</li>
 <li>测量太阳能电池的短路电流和光强之间的关系</li>
-<li>太阳能电池的输出特性测量 参考<a
-target="_blank" rel="noopener" href="http://pems.ustc.edu.cn/uploads/project/20230320/6789300dd0e493fc49f16a319654773d.pdf">太阳能电池特性实验</a></li>
+<li>太阳能电池的输出特性测量 参考<a target="_blank" rel="noopener" href="http://pems.ustc.edu.cn/uploads/project/20230320/6789300dd0e493fc49f16a319654773d.pdf">太阳能电池特性实验</a></li>
 </ol>
 <h3 id="用什么测">用什么测？</h3>
 <p>1409实验室有太阳能电池特性测量仪器可以借来使用。</p>
@@ -319,8 +438,7 @@ Cell，那么就不必拿单色光分别测试了，就用模拟太阳光谱的�
 <h3 id="具体怎么控制变量">具体怎么控制变量？</h3>
 <p>在改变一组变量时，控制其他变量以及无关变量不变，做出多组不同的电池来，然后拿着这些一组一组的电池去测量上述的待测量，把每个电池的特性都测出来。</p>
 <h3 id="要做的测试">要做的测试</h3>
-<h4
-id="测试1二氧化钛直径对光电效率的影响">测试1：二氧化钛直径对光电效率的影响</h4>
+<h4 id="测试1二氧化钛直径对光电效率的影响">测试1：二氧化钛直径对光电效率的影响</h4>
 <table>
 <thead>
 <tr class="header">
@@ -335,8 +453,7 @@ id="测试1二氧化钛直径对光电效率的影响">测试1：二氧化钛直
 <td style="text-align: center;">1h</td>
 <td style="text-align: center;">10%</td>
 <td style="text-align: center;">蔓越莓</td>
-<td style="text-align: center;">20<span
-class="math inline">\(\degree\)</span>C</td>
+<td style="text-align: center;">20<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 1.226ex;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="0.391ex" role="img" focusable="false" viewBox="0 -715 500 173"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi" class=" MathML-Unit"><path data-c="B0" d="M147 628Q147 669 179 692T244 715Q298 715 325 689T352 629Q352 592 323 567T249 542Q202 542 175 567T147 628ZM313 628Q313 660 300 669T259 678H253Q248 678 242 678T234 679Q217 679 207 674T192 659T188 644T187 629Q187 600 198 590Q210 579 250 579H265Q279 579 288 581T305 595T313 628Z"></path></g></g></g></svg></mjx-container></span>C</td>
 </tr>
 </tbody>
 </table>
@@ -394,8 +511,7 @@ class="math inline">\(\degree\)</span>C</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
-<td
-style="text-align: center;"><strong>非纳米尺度(未知晶型)</strong></td>
+<td style="text-align: center;"><strong>非纳米尺度(未知晶型)</strong></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -403,8 +519,7 @@ style="text-align: center;"><strong>非纳米尺度(未知晶型)</strong></td>
 </tr>
 </tbody>
 </table>
-<h4
-id="测试2果汁种类对光电效率的影响">测试2：果汁种类对光电效率的影响</h4>
+<h4 id="测试2果汁种类对光电效率的影响">测试2：果汁种类对光电效率的影响</h4>
 <p>在进行对比实验前，可以测一下各种果汁的吸收峰。</p>
 <table>
 <thead>
@@ -420,8 +535,7 @@ id="测试2果汁种类对光电效率的影响">测试2：果汁种类对光电
 <td style="text-align: center;">1h</td>
 <td style="text-align: center;">10%</td>
 <td style="text-align: center;">21nm</td>
-<td style="text-align: center;">20<span
-class="math inline">\(\degree\)</span>C</td>
+<td style="text-align: center;">20<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 1.226ex;" xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="0.391ex" role="img" focusable="false" viewBox="0 -715 500 173"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi" class=" MathML-Unit"><path data-c="B0" d="M147 628Q147 669 179 692T244 715Q298 715 325 689T352 629Q352 592 323 567T249 542Q202 542 175 567T147 628ZM313 628Q313 660 300 669T259 678H253Q248 678 242 678T234 679Q217 679 207 674T192 659T188 644T187 629Q187 600 198 590Q210 579 250 579H265Q279 579 288 581T305 595T313 628Z"></path></g></g></g></svg></mjx-container></span>C</td>
 </tr>
 </tbody>
 </table>
@@ -454,8 +568,7 @@ class="math inline">\(\degree\)</span>C</td>
 </table>
 <p><em>至此，工作量其实已经不小了</em>
 <em>以下变量探究可能不是重点或耗时太长，暂且可以搁置</em></p>
-<h4
-id="测试3碘液浓度对光电效率的影响">测试3：碘液浓度对光电效率的影响</h4>
+<h4 id="测试3碘液浓度对光电效率的影响">测试3：碘液浓度对光电效率的影响</h4>
 <table>
 <thead>
 <tr class="header">
@@ -513,8 +626,7 @@ id="测试3碘液浓度对光电效率的影响">测试3：碘液浓度对光电
 </tr>
 </tbody>
 </table>
-<h4
-id="测试4染色时间对光电效率的影响">测试4：染色时间对光电效率的影响</h4>
+<h4 id="测试4染色时间对光电效率的影响">测试4：染色时间对光电效率的影响</h4>
 <table>
 <thead>
 <tr class="header">
@@ -589,12 +701,12 @@ id="测试4染色时间对光电效率的影响">测试4：染色时间对光电
 <h3 id="正式实验遇到的问题以及改进">正式实验遇到的问题以及改进</h3>
 <ol start="0" type="1">
 <li>测量光功率不是必须的，我们只需测出开路电压和短路电流，算出填充因子，即可判定电池的效率差异。(感谢王中平老师指正)</li>
-<li>颗粒直径不同的二氧化钛粉末密度差别较大，具体表现为颗粒直径越小的二氧化钛粉末密度越小，因此控制“水-醋酸-洗洁精-二氧化钛分散系”的质量浓度会导致颗粒数浓度差别较大，在涂抹玻璃片时的表现为有的已经非常浓，有的还非常稀薄。<br />
+<li>颗粒直径不同的二氧化钛粉末密度差别较大，具体表现为颗粒直径越小的二氧化钛粉末密度越小，因此控制“水-醋酸-洗洁精-二氧化钛分散系”的质量浓度会导致颗粒数浓度差别较大，在涂抹玻璃片时的表现为有的已经非常浓，有的还非常稀薄。<br>
 <strong>改进方案</strong>：可以控制体积分数，比如用药匙粗略定量。</li>
-<li>二氧化钛浓度太大导致最后涂层过厚，降低了二氧化钛在玻璃上的附着度，明显降低了电池的效率。<br />
-<strong>改进方案</strong>：配二氧化钛悬浊液时尽量降低浓度到一个适宜的范围<br />
+<li>二氧化钛浓度太大导致最后涂层过厚，降低了二氧化钛在玻璃上的附着度，明显降低了电池的效率。<br>
+<strong>改进方案</strong>：配二氧化钛悬浊液时尽量降低浓度到一个适宜的范围<br>
 <strong>启发</strong>：二氧化钛层厚度也是一个重要的变量，但是需要找到合适的加工或测量工具定量改变涂层厚度或测出涂层厚度。</li>
-<li>“太阳能电池特性实验”所测试的电池是更加成熟的硅光电池，能够产生的电压足够高，因此使用的电表分度很大，大概在100mV量级，无法测量我们所能做出的10mV量级的电池。<br />
+<li>“太阳能电池特性实验”所测试的电池是更加成熟的硅光电池，能够产生的电压足够高，因此使用的电表分度很大，大概在100mV量级，无法测量我们所能做出的10mV量级的电池。<br>
 <strong>改进方案</strong>：自己搭建电路</li>
 </ol>
 <table>
@@ -619,277 +731,112 @@ id="测试4染色时间对光电效率的影响">测试4：染色时间对光电
 </tr>
 </tbody>
 </table>
-<p>实际上直接测出通过负载的电流是很困难的，因为该电池电压极低(<span
-class="math inline">\(10^{-1}-10^1mV\)</span>量级)而内阻极大(<span
-class="math inline">\(10^2-10^3\Omega\)</span>量级)，电流已经接近KEITHLEY
+<p>实际上直接测出通过负载的电流是很困难的，因为该电池电压极低(<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="14.237ex" height="2.14ex" role="img" focusable="false" viewBox="0 -864 6292.7 946"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="TeXAtom" transform="translate(1033,393.1) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mo"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(778,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mo" transform="translate(2208.9,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="msup" transform="translate(3209.1,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="mn" transform="translate(1033,393.1) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mi" transform="translate(4645.7,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(5523.7,0)"><path data-c="1D449" d="M52 648Q52 670 65 683H76Q118 680 181 680Q299 680 320 683H330Q336 677 336 674T334 656Q329 641 325 637H304Q282 635 274 635Q245 630 242 620Q242 618 271 369T301 118L374 235Q447 352 520 471T595 594Q599 601 599 609Q599 633 555 637Q537 637 537 648Q537 649 539 661Q542 675 545 679T558 683Q560 683 570 683T604 682T668 681Q737 681 755 683H762Q769 676 769 672Q769 655 760 640Q757 637 743 637Q730 636 719 635T698 630T682 623T670 615T660 608T652 599T645 592L452 282Q272 -9 266 -16Q263 -18 259 -21L241 -22H234Q216 -22 216 -15Q213 -9 177 305Q139 623 138 626Q133 637 76 637H59Q52 642 52 648Z"></path></g></g></g></svg></mjx-container></span>量级)而内阻极大(<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="10.899ex" height="2.14ex" role="img" focusable="false" viewBox="0 -864 4817.6 946"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="mn" transform="translate(1033,393.1) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g><g data-mml-node="mo" transform="translate(1658.8,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="msup" transform="translate(2659,0)"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z" transform="translate(500,0)"></path></g><g data-mml-node="mn" transform="translate(1033,393.1) scale(0.707)"><path data-c="33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></g></g><g data-mml-node="mi" transform="translate(4095.6,0)"><path data-c="3A9" d="M55 454Q55 503 75 546T127 617T197 665T272 695T337 704H352Q396 704 404 703Q527 687 596 615T666 454Q666 392 635 330T559 200T499 83V80H543Q589 81 600 83T617 93Q622 102 629 135T636 172L637 177H677V175L660 89Q645 3 644 2V0H552H488Q461 0 456 3T451 20Q451 89 499 235T548 455Q548 512 530 555T483 622T424 656T361 668Q332 668 303 658T243 626T193 560T174 456Q174 380 222 233T270 20Q270 7 263 0H77V2Q76 3 61 89L44 175V177H84L85 172Q85 171 88 155T96 119T104 93Q109 86 120 84T178 80H222V83Q206 132 162 199T87 329T55 454Z"></path></g></g></g></svg></mjx-container></span>量级)，电流已经接近KEITHLEY
 2000的最小分度，因此不用电表直接测电流。 测电流的替代方法： -
 测量短路电流用测量内阻替代 - 测量输出特性的电流用电阻箱读数替代</p>
 <p>此外，我利用KEITHLEY
 2000的串口功能，写了一个Labview程序，大大简化了读取数据的过程。</p>
 <ol start="4" type="1">
-<li>碘钨灯的发热是很明显的，温度改变会大大改变电池电解质的电迁移速率以及二氧化钛的光催化效率，我们观察到的现象为：随着照射升温，电池的电压从0.05mV一路上升至0.2mV左右，不能保持稳定。因此实验台上近距离照射的碘钨灯不能作为光源使用。<br />
+<li>碘钨灯的发热是很明显的，温度改变会大大改变电池电解质的电迁移速率以及二氧化钛的光催化效率，我们观察到的现象为：随着照射升温，电池的电压从0.05mV一路上升至0.2mV左右，不能保持稳定。因此实验台上近距离照射的碘钨灯不能作为光源使用。<br>
 <strong>解决方案</strong>：借来了带有水平导轨的横向碘钨灯，可以将电池放在距离光源较远的位置，这样可以大大减小热效应。</li>
-<li>放置一段时间后，电池两极之间的碘液就已蒸发殆尽了，这必然会影响电池效率，我们观察到的现象为：4中的同一个电池，在碘钨灯照射一段时间后，电压急剧下降，检查发现此时碘液已经几乎烤干了。<br />
+<li>放置一段时间后，电池两极之间的碘液就已蒸发殆尽了，这必然会影响电池效率，我们观察到的现象为：4中的同一个电池，在碘钨灯照射一段时间后，电压急剧下降，检查发现此时碘液已经几乎烤干了。<br>
 <strong>解决方案</strong>：用胶将组装好的电池边缘封装起来，这样不仅能保持碘液不因蒸发导致浓度变化，也可以使电池使用时间更长。(目前还没有实践)</li>
-<li>鳄鱼夹与导电玻璃之间的电气连接并不可靠，接触部位电阻可能会比较大，并且夹子的移动会显著影响电压测量的准确性。<br />
+<li>鳄鱼夹与导电玻璃之间的电气连接并不可靠，接触部位电阻可能会比较大，并且夹子的移动会显著影响电压测量的准确性。<br>
 <strong>解决方案</strong>：可以寻找玻璃上蚀刻并引出金属电极的工艺，但这已经远远超出本题的范畴了。折中的解决方案使在夹持接触部位涂上导电石墨胶，以确保连接稳定性。</li>
 </ol>
 
+        
+      </div>
+
+         
     </div>
-
     
+     
+  </div>
+  
     
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
     
+      href="/2024/01/22/DropletMicroscope/"
+      title="Droplet Microscope实验记录"
+     >
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/CUPT/" rel="tag"># CUPT</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2024/01/22/DropletMicroscope/" rel="prev" title="Droplet Microscope实验记录">
-      <i class="fa fa-chevron-left"></i> Droplet Microscope实验记录
-    </a></div>
-      <div class="post-nav-item"></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E6%AD%A5%E8%B0%83%E6%9F%A5%E5%92%8C%E5%AE%9E%E9%AA%8C"><span class="nav-number">3.</span> <span class="nav-text">初步调查和实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E7%9A%84%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0%E5%92%8C%E6%8E%A2%E7%A9%B6%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">可能的影响因素和探究方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%93%E6%96%99%E7%A7%8D%E7%B1%BB"><span class="nav-number">3.1.1.</span> <span class="nav-text">染料种类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%97%E5%85%89%E9%9D%A2%E7%A7%AF"><span class="nav-number">3.1.2.</span> <span class="nav-text">受光面积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%89%E5%BC%BA"><span class="nav-number">3.1.3.</span> <span class="nav-text">光强</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%89%E6%BA%90%E5%85%89%E8%B0%B1"><span class="nav-number">3.1.4.</span> <span class="nav-text">光源光谱</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A2%98%E7%94%B5%E8%A7%A3%E8%B4%A8%E6%B5%93%E5%BA%A6"><span class="nav-number">3.1.5.</span> <span class="nav-text">碘电解质浓度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%B3%E7%B1%B3%E4%BA%8C%E6%B0%A7%E5%8C%96%E9%92%9B%E9%A2%97%E7%B2%92%E7%9B%B4%E5%BE%84"><span class="nav-number">3.1.6.</span> <span class="nav-text">纳米二氧化钛颗粒直径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">3.2.</span> <span class="nav-text">实验结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%AE%9E%E9%AA%8C"><span class="nav-number">4.</span> <span class="nav-text">正式实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E9%87%8F%E4%BB%80%E4%B9%88"><span class="nav-number">4.1.</span> <span class="nav-text">测量什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E4%BB%80%E4%B9%88%E6%B5%8B"><span class="nav-number">4.2.</span> <span class="nav-text">用什么测？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%85%B3%E5%8F%98%E9%87%8F%E5%A7%8B%E7%BB%88%E4%B8%8D%E5%8F%98%E7%9A%84%E9%87%8F"><span class="nav-number">4.3.</span> <span class="nav-text">无关变量（始终不变的量）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">4.4.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%E5%8F%98%E9%87%8F"><span class="nav-number">4.5.</span> <span class="nav-text">具体怎么控制变量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A6%81%E5%81%9A%E7%9A%84%E6%B5%8B%E8%AF%95"><span class="nav-number">4.6.</span> <span class="nav-text">要做的测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%951%E4%BA%8C%E6%B0%A7%E5%8C%96%E9%92%9B%E7%9B%B4%E5%BE%84%E5%AF%B9%E5%85%89%E7%94%B5%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">4.6.1.</span> <span class="nav-text">测试1：二氧化钛直径对光电效率的影响</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%952%E6%9E%9C%E6%B1%81%E7%A7%8D%E7%B1%BB%E5%AF%B9%E5%85%89%E7%94%B5%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">4.6.2.</span> <span class="nav-text">测试2：果汁种类对光电效率的影响</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%953%E7%A2%98%E6%B6%B2%E6%B5%93%E5%BA%A6%E5%AF%B9%E5%85%89%E7%94%B5%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">4.6.3.</span> <span class="nav-text">测试3：碘液浓度对光电效率的影响</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8B%E8%AF%954%E6%9F%93%E8%89%B2%E6%97%B6%E9%97%B4%E5%AF%B9%E5%85%89%E7%94%B5%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="nav-number">4.6.4.</span> <span class="nav-text">测试4：染色时间对光电效率的影响</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%BC%8F%E5%AE%9E%E9%AA%8C%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E6%94%B9%E8%BF%9B"><span class="nav-number">4.7.</span> <span class="nav-text">正式实验遇到的问题以及改进</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Jacky Zhang</p>
-  <div class="site-description" itemprop="description">宁拙勿巧，宁朴勿华。</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/jackyzhang26" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;jackyzhang26" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/jackyzhang26@outlook.com" title="E-Mail → jackyzhang26@outlook.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://twitter.com/JackyZh41034072" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;JackyZh41034072" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://instagram.com/yjackyzhang64" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;yjackyzhang64" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
-      </span>
-  </div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2024</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Jacky Zhang</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
+    <p class="title-text">
       
+        Droplet Microscope实验记录
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
 
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
+</article>
 
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2024 Jacky Zhang<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
