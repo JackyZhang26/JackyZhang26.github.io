@@ -216,7 +216,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            3.4k 词 
+            3.5k 词 
           </div>
         </div>
         
@@ -300,6 +300,8 @@ IDE编写。目前还没有写出一个尽善尽美的程序来，所以在这�
 <p>没有用大部分文章经常采用的<code>NTPClient</code>库，而是用<code>configTime</code>函数实现。
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> *ntpServer = <span class="string">&quot;ntp.ntsc.ac.cn&quot;</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">long</span> gmtOffset_sec = <span class="number">8</span> * <span class="number">3600</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> daylightOffset_sec = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">configTime</span>(gmtOffset_sec, daylightOffset_sec, ntpServer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 同步完时间后，只需要声明<code>tm</code>类型的结构体，然后<code>getLocalTime(&amp;结构体名)</code>即可将当前时间信息存入结构体中。</p>
+<h2 id="网络获取天气信息">网络获取天气信息</h2>
+<p>本打算采用心知天气API，用ArduinoJSON库解析天气信息，但是在运行一段时间后ESP模组会莫名其妙自动复位（大概是内存溢出了？）。只好放弃这个功能，回头再细细研究。</p>
 <h2 id="亮度调节">亮度调节</h2>
 <p>通过向VFD屏幕发送命令可以调节其亮度，该命令是一个16进制的两位数，即十进制的0-255，而ADC读取到的光敏电阻的模拟信号数值是0-1024。因此利用<code>map</code>函数映射就可以很方便的实现自动亮度调节。</p>
 <p>虽然该模拟信号不是与环境光强线性相关的，但至少是正相关，实测亮度调节效果还是可以的。</p>
@@ -404,5 +406,20 @@ alt="成品-2" />
 
   </div>
   <script src="/js/light-dark-switch.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
