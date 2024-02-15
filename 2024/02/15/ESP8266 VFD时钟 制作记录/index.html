@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="true" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>ESP8266 VFD时钟 制作记录 | Jacky Zhang的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="前言 笔者一直以来对辉光管、荧光管等充满年代感的显示器件非常感兴趣，然而，苦于水平有限，始终望而却步。   （图源：立创开源硬件平台） 数年以前，笔者用现成的套件制作过一个数码管时钟，聊以替代，然而它的显示效果毕竟还不够复古。  半年前，笔者在某宝发现了这样一款6位VFD模块，体积很小，SPI通信协议，集成了驱动电路，并且提供了详细的示例程序！于是头脑一热，果断入手。  点亮的效果果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ESP8266 VFD时钟 制作记录">
+<meta property="og:url" content="https://jackyzhang26.github.io/2024/02/15/ESP8266%20VFD%E6%97%B6%E9%92%9F%20%E5%88%B6%E4%BD%9C%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Jacky Zhang的博客">
+<meta property="og:description" content="前言 笔者一直以来对辉光管、荧光管等充满年代感的显示器件非常感兴趣，然而，苦于水平有限，始终望而却步。   （图源：立创开源硬件平台） 数年以前，笔者用现成的套件制作过一个数码管时钟，聊以替代，然而它的显示效果毕竟还不够复古。  半年前，笔者在某宝发现了这样一款6位VFD模块，体积很小，SPI通信协议，集成了驱动电路，并且提供了详细的示例程序！于是头脑一热，果断入手。  点亮的效果果">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/02/15/J8D3uCkyhYEinXe.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/02/15/OfYChFInDdwilMH.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/02/14/JZsNunaMzi3LPOd.png">
+<meta property="og:image" content="https://s2.loli.net/2024/02/14/n6jPwd8Tyit5qcf.png">
+<meta property="og:image" content="https://s2.loli.net/2024/02/15/KUm89DEALZ47pSX.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/02/15/J1QheOT9zxtoK4i.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/02/15/n8CUJEcXAHy9WLR.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/02/15/qTsWBvnLNVAUlOz.jpg">
+<meta property="og:image" content="https://s2.loli.net/2024/02/15/54i1lYJSEUOA78t.jpg">
+<meta property="article:published_time" content="2024-02-15T11:03:43.728Z">
+<meta property="article:modified_time" content="2024-02-15T02:50:44.000Z">
+<meta property="article:author" content="Jacky Zhang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/02/15/J8D3uCkyhYEinXe.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Jacky Zhang的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/%5Bobject%20Object%5D">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  
+  
+    
+<div id="banner" class="">
+  <img src="https://apod.nasa.gov/apod/image/2401/GrivolaMoon_Micon_1600.jpg" itemprop="image">
+  <div id="banner-dim"></div>
+</div>
+ 
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>Jacky Zhang的博客 </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/tags">Tags</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS 订阅">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/tags">Tags</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS 订阅">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/pic/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">Jacky Zhang </div>
+      <div class="dot"></div>
+      <div class="subtitle">宁拙勿巧，宁朴勿华。 </div>
+      <div class="link-list">
+        
+          <a class="link-btn" href="jackyzhang26@outlook.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com/JackyZh41034072" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://steamcommunity.com/profiles/76561199034473914/" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/jackyzhang26" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://instagram.com/jackyzhang64" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">标签</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/CUPT/" rel="tag">CUPT</a></li></ul>
+    </div>
+  </div>
+
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-ESP8266 VFD时钟 制作记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        ESP8266 VFD时钟 制作记录
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2024-02-15T11:03:43.728Z" itemprop="datePublished">2024-02-15</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+    未分类 
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            3.4k 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h1 id="前言">前言</h1>
+<p>笔者一直以来对辉光管、荧光管等充满年代感的显示器件非常感兴趣，然而，苦于水平有限，始终望而却步。
+<img
+src="https://image.lceda.cn/pullimage/2XjodgpfqpF4SJKorTHLa7uFWzME9lFlXBmthY5U.jpeg"
+alt="辉光管" /> <img
+src="https://image.lceda.cn/pullimage/9W3dREErpTKduj1jbhkKm3wRYWF2uC2EfV4s9HC3.jpeg"
+alt="荧光管" /> （图源：<a
+target="_blank" rel="noopener" href="https://oshwhub.com">立创开源硬件平台</a>）</p>
+<p>数年以前，笔者用<a
+target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?id=590491428671&amp;spm=a1z10.3-c-s.w4002-14479784363.17.75b0643b05oZND">现成的套件</a>制作过一个数码管时钟，聊以替代，然而它的显示效果毕竟还不够复古。
+<img src="https://s2.loli.net/2024/02/15/J8D3uCkyhYEinXe.jpg"
+alt="数码管" /></p>
+<p>半年前，笔者在某宝发现了这样一款<a
+target="_blank" rel="noopener" href="https://item.taobao.com/item.htm?_u=e20806c8sda67d&amp;id=630824885636&amp;spm=a1z09.2.0.0.3e722e8dRei8In">6位VFD模块</a>，体积很小，SPI通信协议，集成了驱动电路，并且提供了详细的示例程序！于是头脑一热，果断入手。</p>
+<p><img src="https://s2.loli.net/2024/02/15/OfYChFInDdwilMH.jpg"
+alt="AGC_20231208_235758725_compressed_1707984243011.jpg" /><br />
+点亮的效果果然很nice，但是从开发板上飞线连接不nice。于是又头脑一热，决定边学边做，设计一个专门的电路，做个时钟出来。<del>既然都这样了何不当时就连显示器件驱动一块设计了</del></p>
+<blockquote>
+<p>就是为了这点醋，我才包的这顿饺子。</p>
+</blockquote>
+<h1 id="功能构想">功能构想</h1>
+<ul>
+<li>网络对时
+<ul>
+<li>主要是不熟悉RTC(实时时钟)。</li>
+<li>用笔者最熟悉的ESP8266或ESP32做MCU。</li>
+</ul></li>
+<li>USB TYPE-C 供电
+<ul>
+<li>主要是现在TYPE-C的线随处可得。</li>
+</ul></li>
+<li>一组按钮，用于更改工作模式以及调整设置等。</li>
+<li>自动调节亮度
+<ul>
+<li>不必十分精确，因此只需光敏电阻即可</li>
+<li>刚好利用ESP8266或ESP32的ADC实现</li>
+</ul></li>
+</ul>
+<h1 id="硬件部分">硬件部分</h1>
+<h2 id="电路设计">电路设计</h2>
+<p>经过历时半个月断断续续反复修改后，终于画出了一版较为满意的原理图和PCB。（不是很敢相信立创EDA的自动布线，所以最后还是手动布线了。<del>懒，所以不想铺铜了。</del>）</p>
+<p>综合考虑价格、性能、体积、加工难度、外围电路复杂度等方面，最终选用了ESP-12F。</p>
+<p>同样考虑到焊接难度，选用了只有供电功能的2P
+TYPE-C。因此没有办法把USB转串口芯片安置在板子上了，只好引出一组排针，作程序烧录以及串口调试用。</p>
+<p>后续发现VFD模块的输入电压应该是5V而不是3.3V，但是对于其正常工作并没有什么影响。
+<img src="https://s2.loli.net/2024/02/14/JZsNunaMzi3LPOd.png"
+alt="原理图" /> <img
+src="https://s2.loli.net/2024/02/14/cl92hCrBiaWvTzH.png" alt="PCB" />
+<img src="https://s2.loli.net/2024/02/14/n6jPwd8Tyit5qcf.png"
+alt="3D模型1" /> <img
+src="https://s2.loli.net/2024/02/14/aW5mRrj2LFsQhA4.png"
+alt="3D模型2" /></p>
+<h2 id="电路焊接">电路焊接</h2>
+<p>从嘉立创打的板子以及立创商城购买的元件到货以后，正式开工。 <img
+src="https://s2.loli.net/2024/02/15/ejDRgsinXScJMI3.jpg"
+alt="PCB到货" /></p>
+<p>我本以为新买的调温焊台已经足够好用了，0805、sop-123、SOT-89等封装的贴片元件已经足够好焊了，但是没想到实际操作起来还是很难办。
+<img src="https://s2.loli.net/2024/02/15/KUm89DEALZ47pSX.jpg"
+alt="焊台" /></p>
+<p>折腾了一顿以后，总算把元件都焊上去了。检查一番，利用助焊剂、刀片等“土法”处理完虚焊连锡等问题以后，不管好不好看，至少没有故障了。
+<img src="https://s2.loli.net/2024/02/15/J1QheOT9zxtoK4i.jpg"
+alt="成品-背面" /> <img
+src="https://s2.loli.net/2024/02/15/K4RgnBUFoLmJeO8.jpg"
+alt="成品-正面" /></p>
+<h1 id="软件部分">软件部分</h1>
+<p>采用Arduino
+IDE编写。目前还没有写出一个尽善尽美的程序来，所以在这里只截取部分代码。</p>
+<p>关于VFD屏幕显示的函数是由示例程序提供的，就不写在这里了。</p>
+<h2 id="连接wifi">连接WiFi</h2>
+<p>为了在不同的环境下不必在程序里修改配置，采用了<code>WiFiManager</code>库。在没有连接到已保存的WiFi时，ESP模组会开启热点，用移动设备或计算机连接该热点即可修改网络配置。
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;WiFiManager.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line">	WiFiManager wifiManager;</span><br><span class="line">	wifiManager.<span class="built_in">autoConnect</span>(<span class="string">&quot;ESP-12F&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="网络对时">网络对时</h2>
+<p>没有用大部分文章经常采用的<code>NTPClient</code>库，而是用
+<code>configTime</code>函数实现。 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">char</span> *ntpServer = <span class="string">&quot;ntp.ntsc.ac.cn&quot;</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">long</span> gmtOffset_sec = <span class="number">8</span> * <span class="number">3600</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> daylightOffset_sec = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">configTime</span>(gmtOffset_sec, daylightOffset_sec, ntpServer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+同步完时间后，只需要声明<code>tm</code>类型的结构体，然后<code>getLocalTime(&amp;结构体名)</code>即可将当前时间信息存入结构体中。</p>
+<h2 id="亮度调节">亮度调节</h2>
+<p>通过向VFD屏幕发送命令可以调节其亮度，该命令是一个16进制的两位数，即十进制的0-255，而ADC读取到的光敏电阻的模拟信号数值是0-1024。因此利用<code>map</code>函数映射就可以很方便的实现自动亮度调节。</p>
+<p>虽然该模拟信号不是与环境光强线性相关的，但至少是正相关，实测亮度调节效果还是可以的。</p>
+<p>另外，需要用<code>Ticker</code>库做一个定时中断，以使得亮度调节实时运行。
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ticker.<span class="built_in">attach</span>(<span class="number">1</span>, autoChangeLight);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">autoChangeLight</span><span class="params">()</span></span>&#123;</span><br><span class="line">	lightValue = <span class="built_in">analogRead</span>(analogInPin);</span><br><span class="line">	lightCommand = <span class="built_in">map</span>(lightValue,<span class="number">0</span>,<span class="number">1024</span>,<span class="number">0</span>,<span class="number">255</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+当然，设计的按钮也不能白白浪费了，于是又利用外部中断写了一个按钮改变亮度模式的功能。
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">volatile</span> <span class="type">int</span> lightMode;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">lightSetting</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="built_in">attachInterrupt</span>(<span class="built_in">digitalPinToInterrupt</span>(<span class="number">5</span>), changeLightMode, FALLING);</span><br><span class="line">  <span class="keyword">switch</span>(lightMode)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">    ticker.<span class="built_in">attach</span>(<span class="number">1</span>,autoChangeLight);</span><br><span class="line">    <span class="built_in">VFD_clear</span>();</span><br><span class="line">    <span class="built_in">VFD_WriteStr</span>(<span class="number">0</span>,<span class="string">&quot;auto&quot;</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    ticker.<span class="built_in">detach</span>();</span><br><span class="line">    lightCommand=<span class="number">0x40</span>;</span><br><span class="line">    <span class="built_in">VFD_clear</span>();</span><br><span class="line">    <span class="built_in">VFD_WriteStr</span>(<span class="number">0</span>,<span class="string">&quot;111111&quot;</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    ticker.<span class="built_in">detach</span>();</span><br><span class="line">    lightCommand=<span class="number">0x80</span>;</span><br><span class="line">    <span class="built_in">VFD_clear</span>();</span><br><span class="line">    <span class="built_in">VFD_WriteStr</span>(<span class="number">0</span>,<span class="string">&quot;222222&quot;</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">    ticker.<span class="built_in">detach</span>();</span><br><span class="line">    lightCommand=<span class="number">0xc0</span>;</span><br><span class="line">    <span class="built_in">VFD_clear</span>();</span><br><span class="line">    <span class="built_in">VFD_WriteStr</span>(<span class="number">0</span>,<span class="string">&quot;333333&quot;</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">    ticker.<span class="built_in">detach</span>();</span><br><span class="line">    lightCommand=<span class="number">0xff</span>;</span><br><span class="line">    <span class="built_in">VFD_clear</span>();</span><br><span class="line">    <span class="built_in">VFD_WriteStr</span>(<span class="number">0</span>,<span class="string">&quot;444444&quot;</span>);</span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">IRAM_ATTR <span class="type">void</span> <span class="title">changeLightMode</span><span class="params">()</span></span>&#123;</span><br><span class="line">  lightMode++;</span><br><span class="line">  <span class="keyword">if</span>(lightMode&gt;=<span class="number">5</span>)&#123;</span><br><span class="line">    lightMode=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 关于外部中断函数为什么要加<code>IRAM_ATTR</code>，参见<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/PJ201608/article/details/128271824">这篇文章</a>。</p>
+<h2 id="按钮改变工作模式">按钮改变工作模式</h2>
+<p>思路与改变亮度模式的部分类似，也是利用外部中断和<code>switch</code>语句实现。
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">volatile</span> <span class="type">int</span> mode;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">attachInterrupt</span>(<span class="built_in">digitalPinToInterrupt</span>(<span class="number">0</span>), changeMode, FALLING);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">loop</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">switch</span>(mode)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">printLocalTime</span>();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">printCalendar</span>();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">    <span class="built_in">printTime</span>();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">    <span class="built_in">lightSetting</span>();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">    <span class="built_in">detachInterrupt</span>(<span class="built_in">digitalPinToInterrupt</span>(<span class="number">5</span>));</span><br><span class="line">    <span class="built_in">printAboutInfo</span>();</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">IRAM_ATTR <span class="type">void</span> <span class="title">changeMode</span><span class="params">()</span></span>&#123;</span><br><span class="line">  mode++;</span><br><span class="line">  <span class="keyword">if</span>(mode&gt;=<span class="number">5</span>)&#123;</span><br><span class="line">    mode=<span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="结语">结语</h1>
+<p>虽然最终程序还没有写得尽善尽美，但也算是初步完成了这样一个gadget。
+<img src="https://s2.loli.net/2024/02/15/n8CUJEcXAHy9WLR.jpg"
+alt="成品-1" /></p>
+<blockquote>
+<p>就是为了这点醋，我才包的这顿饺子。</p>
+</blockquote>
+<p>从硬件设计到程序设计的全部流程都体验了一番，这顿饺子也算是没白包。</p>
+<p><img src="https://s2.loli.net/2024/02/15/qTsWBvnLNVAUlOz.jpg"
+alt="成品-3" />
+<del>只可惜期末考试之前一直在画PCB导致绩点惨不忍睹（悲</del></p>
+<p><img src="https://s2.loli.net/2024/02/15/54i1lYJSEUOA78t.jpg"
+alt="成品-2" />
+<del>这两个时间差这么多的原因大抵是后面那个时钟上的DS1307不够精确罢（迫真</del></p>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2024/01/22/JuicySolarCell/"
+      title="Juicy Solar Cell实验记录"
+     >
+
+    <p class="title-text">
+      
+        Juicy Solar Cell实验记录
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2024 Jacky Zhang<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="//cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
