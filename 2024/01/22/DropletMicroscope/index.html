@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://s2.loli.net/2024/03/03/5q4a3ifLTmvRy8E.jpg">
 <meta property="og:image" content="https://s2.loli.net/2024/03/03/n3temI9dkF7SGyQ.jpg">
 <meta property="article:published_time" content="2024-01-22T13:56:00.589Z">
-<meta property="article:modified_time" content="2024-03-03T08:53:03.133Z">
+<meta property="article:modified_time" content="2024-03-08T09:42:23.911Z">
 <meta property="article:author" content="Jacky Zhang">
 <meta property="article:tag" content="CUPT">
 <meta name="twitter:card" content="summary">
@@ -172,6 +172,12 @@
       <h3 class="widget-title">最新文章</h3>
       <ul>
         
+          <a class="recent-link" href="/2024/03/08/ChargeMeter/" title="Charge Meter实验记录" >
+            <div class="recent-link-text">
+              Charge Meter实验记录
+            </div>
+          </a>
+        
           <a class="recent-link" href="/2024/02/15/ESP8266%20VFD%E6%97%B6%E9%92%9F%20%E5%88%B6%E4%BD%9C%E8%AE%B0%E5%BD%95/" title="ESP8266 VFD时钟 制作记录" >
             <div class="recent-link-text">
               ESP8266 VFD时钟 制作记录
@@ -234,7 +240,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            3.3k 词 
+            4.1k 词 
           </div>
         </div>
         
@@ -319,7 +325,29 @@ class="math inline">\(\alpha_1\)</span>、<span
 class="math inline">\(\alpha_2\)</span>能够确保足够准确，测量的不确定度主要取决于<span
 class="math inline">\(d\)</span>，也就是与卡尺的精度相当。</p>
 <h3 id="分辨率">分辨率</h3>
-<p>实际上可以由分辨率板衡量，参考助教提供的方案。</p>
+<p>实际上可以由分辨率板衡量。</p>
+<blockquote>
+<p>镜头的分辨率常用单位距离内能分辨的线对数(如每毫米线对数，单位为对/mm)来表示。艾里斑的大小与光的波长和通光口径有关，即艾里斑的半角满足<span
+class="math display">\[sin\theta=1.22\lambda
+/D\]</span>其中，入是光的波长；D是通光口径的直径。按照光的衍射理论和瑞利判据的定义，在没有像差的条件下，镜头的分辨率仅与镜头的相对孔径有关，若以能分辨的两点距离来表示，则有<span
+class="math display">\[d=\frac{1.22\lambda
+f}{D}\]</span>镜头的分辨率通常用每毫米能分辨的线对数N来表示，此时有:
+<span class="math display">\[N_1=1/d=\frac{D}{1.22\lambda
+f}\]</span>然而，整个系统的分辨率是由整体系统共同决定的，本实验因为用到了CCD/CMOS相机成像，所以整个系统的分辨率由镜头分辨率和
+CCD/CMOS相机分辨率两部分组成。设镜头的分辨率为<span
+class="math inline">\(N_1\)</span>,CCD/CMOS相机芯片的分辨率为<span
+class="math inline">\(N_C\)</span>，则系统的分辨率N可由下面的公式来表示<span
+class="math display">\[\frac{1}{N}=\frac{1}{N_C}+\frac{1}{N_1}\]</span>其中，CCD/CMOS相机的分辨率N
+可以根据它的像元大小计算得到。 因此，若将分辨率板作为目标物，通过
+CCD/CMOS相机采集被测镜头像平面上的分辨率板的像，通过图像处理得到恰好能分辨的最小两线间距d(单位为mm),求其倒数可得系统的分辨率<span
+class="math inline">\(N\)</span>；再根据像元大小求出<span
+class="math inline">\(N_C\)</span>，即可算出镜头的分辨率<span
+class="math inline">\(N_1\)</span>。</p>
+</blockquote>
+<p>可见，分辨率是与光源波长，水滴焦距有关的。
+既然光源有限，波长数据不够多，可以确定一个波长不变，通过改变体积、接触角等因素，改变水滴焦距，测量分辨率数据。</p>
+<p>另外，读分辨率板的结果其实是水滴和眼睛（或相机）共同构成的光学系统的分辨率，而人眼的分辨率并不容易定量衡量，也不够精确，故很有必要采取相机-水滴系统读取分辨率值。</p>
+<p>在测量中，我们必须把分辨率板准确地放在水滴的焦点处，所以必须有能够准确控制位置的竖直方向光具座，而不能仅用几片玻璃片不精确地叠加在水滴下面。</p>
 <p>未完待续</p>
 
         
