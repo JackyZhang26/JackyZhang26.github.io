@@ -6,7 +6,7 @@
   <link href="https://jackyzhang26.github.io/atom.xml" rel="self"/>
   
   <link href="https://jackyzhang26.github.io/"/>
-  <updated>2025-03-08T16:56:52.136Z</updated>
+  <updated>2025-03-27T18:16:27.326Z</updated>
   <id>https://jackyzhang26.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>由Cytus II引发的一些思考</title>
+    <link href="https://jackyzhang26.github.io/2025/03/27/%E7%94%B1CytusII%E5%BC%95%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/"/>
+    <id>https://jackyzhang26.github.io/2025/03/27/%E7%94%B1CytusII%E5%BC%95%E5%8F%91%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/</id>
+    <published>2025-03-27T15:28:06.316Z</published>
+    <updated>2025-03-27T18:16:27.326Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近通关了Cytus II的主线剧情，以下是我关于这个故事的部分思考。</p><h1 id="关于科技考古与技术的退步">关于“科技考古”与技术的退步</h1><p>这里指的不是“利用科技手段考古”，而是发掘“旧时代”的科技。故事中的A.R.C.(Instituteof Ancient Ruin Civilization)就是从事这样的研究的。</p><p>故事当中，人类是经过古人类灭亡、复兴工程、除役事件等一系列事件才发生了技术的退步，因此A.R.C.的存在就十分合理。真实世界中，我们没有遇到毁灭性的灾难，科技在正常地向前发展，怎么会有技术的退步呢？“考古”又有什么意义呢？</p><p>然而，技术退步是真实存在的，大抵来自于“制度性失忆”。参见<ahref="https://www.zhihu.com/question/607622786/answer/34064346132">美国为什么不原封不动照抄50年前载人登月方法？- niconiconi的回答 - 知乎</a>。</p><p>对于理科来说，这并不会有太大的影响，因为理科始终在归纳总结，前人给后人留下的总是漂亮的、完备的体系。</p><p>而对于工程来说，这就是灾难性的，因为现实不同于理论，琐碎的东西很多，有些不值得总结，有些没办法总结，最终留下的是一个“能跑，但是不知道为什么”的体系。于是一个个“草台班子”就在这样的基础上逐渐累积起来（故事中A.R.C.就是这么利用Vanessa的）。</p><p>纪录片"Return to Space"中大概有这么一句话：</p><blockquote><p>罗马人曾经修建了宏伟的建筑，但他们最终忘记了如何修建；NASA曾经登上了月球，但他们已经没有能力再次发射。</p></blockquote><p><del>如今波音和NASA连Return to Earth的能力都没有了...</del></p><p>因此，对于现在的人类来说，发掘旧技术，也未尝不是一件有价值的事情。于我看来，更有乐在其中。比如：</p><p><strong>点亮一颗电子管，欣赏它昔日的辉光。</strong></p><h1 id="关于技术保守主义">关于“技术保守主义”</h1><p>这个概念还不能给出明确的定义，<del>因为是现编的...</del>但大致来说就是在发展新技术的过程中保持谨慎。</p><p>故事中，古人类因为滥用新技术而灭亡，而新人类也因为“滥用”Vanessa而差点被失控的Vanessa消灭。我们可以说，灾难是Ivy的执念造成的，又或者Vanessa的偏见造成的，但根本的原因还是人类没有控制好由自己创造的技术。建造者、精神网路，本是人类智慧的产物，却成了人类为自己挖掘的坟墓。</p><p>只有始终让新技术处于人类的可控范围之中，才能让其服务人类，而非毁灭人类。</p><p>如今正是AI方兴未艾之时，我们正面临着一个“失控”的可能性：机器学习的过程对于人类是个黑箱（当然，机器学习的可解释性也是现在的一个重要研究方向），这就意味着这项技术部分脱离了人类的可控范围。在这样一种情况下，我们不应该毫无顾忌地广泛应用AI，甚至过分地依赖AI。</p><p>然而现实情况是，不知出于何种目的（为了热度？为了吸引投资？又或者只是出于懒惰？）人们正在大肆地将AI应用到各个毫不相干的领域，而丝毫不顾及其隐患。</p><p><strong>是时候踩一踩刹车了。</strong></p><h1 id="关于意识以及人类的身份认同">关于“意识”以及“人类的身份认同”</h1><p>说到AI，另一个经常被公众提及的问题是：AI是否具有意识？如果有，那是否应该拥有人权？</p><p>而在Cytus的故事当中，本不应该具有独立意识的“建造者”当中，出现了一批觉醒了自我意识的“眷顾者”，但显然将人类视作异己；同样的，ROBO_HEAD也觉醒了自我意识，但将人类视作自己的朋友乃至同类。</p><p>AI是否算作单纯的工具的分界线，就在于是否拥有独立且自由的自我意识。（在此，暂且不论意识之有无如何判定）</p><p>再进一步，觉醒了自我意识的AI，是否应该赋予人权（i.e. 视作人类）？</p><p>如果将“人类”这个概念只局限在生物学意义上——基因相近，没有生殖隔离才是人类——那么就会面临如下的“忒修斯之船”：如果若干年后人类后代的基因已经与今天大不相同，那么他们还是不是人类？如果将一个人的所有意识复制到计算机上（且不论如何实现）那这个运行着人的意识的计算机是不是人类？</p><p>所以答案应当取决于“人类的身份认同”。</p><p>对于人类来说，首要的目标是延续这个种族的生存。除此之外的一切，都应为人类的利益而让步。我们发展科技，是为了人类生活的更便利；我们保护环境，是为了人类生活的更舒适；我们为共产主义而奋斗，也是为了让全人类实现自由而全面的发展。</p><p>因此，如果一个意识体认同自己是人类，和人类同呼吸共命运，那么我们有理由接纳其作为人类的一员。反之，则应当被视为异类，其利益必须让步于人类的利益。（类比中国古代历史，其他民族如果认同华夏民族的身份，则也成为华夏民族的一部分）。</p><p>看起来有些“狭隘民族主义”？但是，如今全人类尚不能构成命运共同体，民族之间深沟高垒尚在，阶级之间剥削压迫尚存，为全人类的利益而奋斗尚为高风亮节，又何谈其他意识体的利益？</p><p><strong>未来的观念转变，留给未来人思考罢。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近通关了Cytus II的主线剧情，以下是我关于这个故事的部分思考。&lt;/p&gt;
+&lt;h1 id=&quot;关于科技考古与技术的退步&quot;&gt;关于“科技考古”与技术的退步&lt;/h1&gt;
+&lt;p&gt;这里指的不是“利用科技手段考古”，而是发掘“旧时代”的科技。故事中的A.R.C.(Institute</summary>
+      
+    
+    
+    
+    
+    <category term="只言片语" scheme="https://jackyzhang26.github.io/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>观龙眠桐溪博客有感</title>
     <link href="https://jackyzhang26.github.io/2025/03/09/%E8%A7%82%E9%BE%99%E7%9C%A0%E6%A1%90%E6%BA%AA%E5%8D%9A%E5%AE%A2%E6%9C%89%E6%84%9F/"/>
     <id>https://jackyzhang26.github.io/2025/03/09/%E8%A7%82%E9%BE%99%E7%9C%A0%E6%A1%90%E6%BA%AA%E5%8D%9A%E5%AE%A2%E6%9C%89%E6%84%9F/</id>
     <published>2025-03-08T16:13:50.705Z</published>
-    <updated>2025-03-08T16:56:52.136Z</updated>
+    <updated>2025-03-27T15:39:47.285Z</updated>
     
     <content type="html"><![CDATA[<p>本学期有幸选中刘万东教授之电动力学课程。</p><p>课后闲时，刘老先生与吾等分享旧作“科学人文，费米玻色”，观点颇有新意。故访老先生博客<ahref="https://blog.sciencenet.cn/home.php?mod=space&amp;uid=595906">龙眠桐溪</a>，每日作诗一首，今已数千，皆所见所思，妙手偶得之作，吾实叹为观止。</p><p>想吾立此博客已两年有余，期年而不得一更。实为学业、科研诸事缠身，而不得须臾抽身，此亦无可奈何尔。但愿逾数十载，吾尚有思考之力，属文之能，日得闲半刻，思吾之所见，记吾之所思。</p>]]></content>
     
@@ -36,7 +60,7 @@ href=&quot;https://blog.sciencenet.cn/home.php?mod=space&amp;amp;uid=59</summary
     
     
     
-    <category term="Others" scheme="https://jackyzhang26.github.io/tags/Others/"/>
+    <category term="只言片语" scheme="https://jackyzhang26.github.io/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
     
   </entry>
   
@@ -165,7 +189,7 @@ href=&quot;https://blog.sciencenet.cn/home.php?mod=space&amp;amp;uid=59</summary
     <link href="https://jackyzhang26.github.io/2025/02/04/%E6%96%B0%E5%88%B6meme%E4%B8%A4%E5%BC%A0/"/>
     <id>https://jackyzhang26.github.io/2025/02/04/%E6%96%B0%E5%88%B6meme%E4%B8%A4%E5%BC%A0/</id>
     <published>2025-02-04T14:41:58.736Z</published>
-    <updated>2025-02-04T14:52:51.510Z</updated>
+    <updated>2025-03-27T15:39:44.880Z</updated>
     
     <content type="html"><![CDATA[<h2 id="western-version">Western version</h2><figure><img src="https://s2.loli.net/2025/02/04/elQxrZXF25shGmt.jpg"alt="Cucydides.jpg" /><figcaption aria-hidden="true">Cucydides.jpg</figcaption></figure><h2 id="chinese-version">Chinese version</h2><figure><img src="https://s2.loli.net/2025/02/04/ipH5tEcbAsIBLZ6.jpg"alt="太史工.jpg" /><figcaption aria-hidden="true">太史工.jpg</figcaption></figure><blockquote><p>预告：太史公旧作《刚子》《田某列传》等即将上线</p></blockquote>]]></content>
     
@@ -181,7 +205,7 @@ alt=&quot;Cucydides.jpg&quot; </summary>
     
     
     
-    <category term="Others" scheme="https://jackyzhang26.github.io/tags/Others/"/>
+    <category term="只言片语" scheme="https://jackyzhang26.github.io/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/"/>
     
   </entry>
   
