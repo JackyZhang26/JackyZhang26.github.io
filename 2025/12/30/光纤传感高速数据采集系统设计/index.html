@@ -20,12 +20,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD9238 ADC，通过采集、判选与发送的流水线并行架构，确保了扫描周期的连续性。系统利用移位寄存器实现260 ns的延时标定，精准对齐触发">
+  <meta name="description" content="24秋“大学物理-研究性实验”项目报告整理，word to markdown由deepseek-v4-flash-ascend模型完成。 作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD">
 <meta property="og:type" content="article">
 <meta property="og:title" content="光纤传感高速数据采集系统设计">
-<meta property="og:url" content="https://jackyzhang26.github.io/2026/08/08/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:url" content="https://jackyzhang26.github.io/2025/12/30/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="太史工书">
-<meta property="og:description" content="作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD9238 ADC，通过采集、判选与发送的流水线并行架构，确保了扫描周期的连续性。系统利用移位寄存器实现260 ns的延时标定，精准对齐触发">
+<meta property="og:description" content="24秋“大学物理-研究性实验”项目报告整理，word to markdown由deepseek-v4-flash-ascend模型完成。 作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image1.png">
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image2.png">
@@ -38,10 +38,10 @@
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image9.png">
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image10.png">
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image11.png">
-<meta property="article:published_time" content="2026-08-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-08-08T15:35:23.412Z">
+<meta property="article:published_time" content="2025-12-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-08T15:45:02.117Z">
 <meta property="article:author" content="Jacky Zhang">
-<meta property="article:tag" content="研究性实验">
+<meta property="article:tag" content="大物实验">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image1.png">
   
@@ -281,7 +281,7 @@ mjx-container[display="true"] + br {
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">标签</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/CUPT/" rel="tag">CUPT</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/DIY/" rel="tag">DIY</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/" rel="tag">只言片语</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C/" rel="tag">大物实验</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E5%88%9B%E4%BD%9C/" rel="tag">抽象创作</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%A0%94%E7%A9%B6%E6%80%A7%E5%AE%9E%E9%AA%8C/" rel="tag">研究性实验</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%BB%8F%E5%8F%B2%E5%AD%90%E9%9B%86/" rel="tag">经史子集</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/CUPT/" rel="tag">CUPT</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/DIY/" rel="tag">DIY</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%8F%AA%E8%A8%80%E7%89%87%E8%AF%AD/" rel="tag">只言片语</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C/" rel="tag">大物实验</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%8A%BD%E8%B1%A1%E5%88%9B%E4%BD%9C/" rel="tag">抽象创作</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%BB%8F%E5%8F%B2%E5%AD%90%E9%9B%86/" rel="tag">经史子集</a></li></ul>
     </div>
   </div>
 
@@ -292,12 +292,6 @@ mjx-container[display="true"] + br {
     <div class="widget">
       <h3 class="widget-title">最新文章</h3>
       <ul>
-        
-          <a class="recent-link" href="/2026/08/08/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/" title="光纤传感高速数据采集系统设计" >
-            <div class="recent-link-text">
-              光纤传感高速数据采集系统设计
-            </div>
-          </a>
         
           <a class="recent-link" href="/2026/08/07/%E6%B8%B8%E5%8E%A6%E9%97%A8%E6%A4%8D%E7%89%A9%E5%9B%AD%E5%81%B6%E4%BD%9C/" title="游厦门植物园偶作" >
             <div class="recent-link-text">
@@ -320,6 +314,12 @@ mjx-container[display="true"] + br {
           <a class="recent-link" href="/2026/02/28/%E4%B8%99%E5%8D%88%E6%AD%A3%E6%9C%88%E4%B8%B4%E4%BA%89%E5%BA%A7%E4%BD%8D%E5%B8%96%E8%B7%8B/" title="丙午正月临争座位帖跋" >
             <div class="recent-link-text">
               丙午正月临争座位帖跋
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2026/01/31/%E8%85%8A%E6%9C%88%E5%8D%81%E4%BA%8C%E6%97%A5%E9%85%92%E4%B8%AD%E8%AE%B0/" title="腊月十二日酒中记" >
+            <div class="recent-link-text">
+              腊月十二日酒中记
             </div>
           </a>
         
@@ -356,7 +356,7 @@ mjx-container[display="true"] + br {
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2026-08-07T16:00:00.000Z" itemprop="datePublished">2026-08-08</time>
+  <time class="dt-published" datetime="2025-12-29T16:00:00.000Z" itemprop="datePublished">2025-12-30</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -367,17 +367,19 @@ mjx-container[display="true"] + br {
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            9.9k 词 
+            10k 词 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A0%94%E7%A9%B6%E6%80%A7%E5%AE%9E%E9%AA%8C/" rel="tag">研究性实验</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%A7%E7%89%A9%E5%AE%9E%E9%AA%8C/" rel="tag">大物实验</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
           <blockquote>
-<p>作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟</p>
+<p>24秋“大学物理-研究性实验”项目报告整理，word to
+markdown由<code>deepseek-v4-flash-ascend</code>模型完成。
+作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟</p>
 </blockquote>
 <h2 id="摘要">摘要</h2>
 <p>针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx
@@ -808,22 +810,27 @@ distributed strain sensing technique," Appl. Opt. 55, 6953-6959
   
     
 <nav id="article-nav">
-  <a class="article-nav-btn left  disabled "
+  <a class="article-nav-btn left "
+    
+      href="/2026/01/09/%E7%A0%94%E7%A9%B6%E6%80%A7%E5%AE%9E%E9%AA%8C%E7%AB%9E%E8%B5%9B%E5%B9%B6%E8%AF%BB%E5%88%98%E8%80%81%E5%85%88%E7%94%9F%E8%AF%97%E6%9C%89%E6%84%9F/"
+      title="研究性实验结题并读刘老先生诗有感"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
+      
+        研究性实验结题并读刘老先生诗有感
         
     </p>
   </a>
   <a class="article-nav-btn right "
     
-      href="/2026/08/07/%E6%B8%B8%E5%8E%A6%E9%97%A8%E6%A4%8D%E7%89%A9%E5%9B%AD%E5%81%B6%E4%BD%9C/"
-      title="游厦门植物园偶作"
+      href="/2025/07/05/%E8%BF%8E%E6%95%85%E6%A0%A1%E5%B8%88%E7%94%9F%E8%B5%B4%E7%A7%91%E6%9C%89%E6%84%9F/"
+      title="迎故校师生赴科有感"
      >
 
     <p class="title-text">
       
-        游厦门植物园偶作
+        迎故校师生赴科有感
         
     </p>
     <i class="fa-solid fa-angle-right"></i>
@@ -890,20 +897,5 @@ distributed strain sensing technique," Appl. Opt. 55, 6953-6959
 
   </div>
   <script src="/js/light-dark-switch.js"></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="//cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
