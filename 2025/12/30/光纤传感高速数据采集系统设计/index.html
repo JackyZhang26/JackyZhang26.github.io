@@ -20,12 +20,12 @@
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="24秋“大学物理-研究性实验”项目报告整理，word to markdown由deepseek-v4-flash-ascend模型完成。 作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD">
+  <meta name="description" content="24秋“大学物理-研究性实验”项目报告整理，word to markdown由pandoc和deepseek-v4-flash-ascend模型完成。 作者：张一鸣、李欣泽、李宸昱  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD9">
 <meta property="og:type" content="article">
 <meta property="og:title" content="光纤传感高速数据采集系统设计">
 <meta property="og:url" content="https://jackyzhang26.github.io/2025/12/30/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="太史工书">
-<meta property="og:description" content="24秋“大学物理-研究性实验”项目报告整理，word to markdown由deepseek-v4-flash-ascend模型完成。 作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD">
+<meta property="og:description" content="24秋“大学物理-研究性实验”项目报告整理，word to markdown由pandoc和deepseek-v4-flash-ascend模型完成。 作者：张一鸣、李欣泽、李宸昱  摘要 针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx Zynq 7020与AD9">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image1.png">
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image2.png">
@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image10.png">
 <meta property="og:image" content="https://jackyzhang26.github.io/pic/%E5%85%89%E7%BA%A4%E4%BC%A0%E6%84%9F%E9%AB%98%E9%80%9F%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86/image11.png">
 <meta property="article:published_time" content="2025-12-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-08-08T15:45:02.117Z">
+<meta property="article:modified_time" content="2026-08-09T06:12:51.486Z">
 <meta property="article:author" content="Jacky Zhang">
 <meta property="article:tag" content="大物实验">
 <meta name="twitter:card" content="summary">
@@ -367,7 +367,7 @@ mjx-container[display="true"] + br {
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            10k 词 
+            9.5k 词 
           </div>
         </div>
         
@@ -378,8 +378,8 @@ mjx-container[display="true"] + br {
         
           <blockquote>
 <p>24秋“大学物理-研究性实验”项目报告整理，word to
-markdown由<code>deepseek-v4-flash-ascend</code>模型完成。
-作者：张一鸣、李欣泽、李宸昱　指导教师：赵伟</p>
+markdown由<code>pandoc</code>和<code>deepseek-v4-flash-ascend</code>模型完成。
+作者：张一鸣、李欣泽、李宸昱</p>
 </blockquote>
 <h2 id="摘要">摘要</h2>
 <p>针对光纤布拉格光栅（FBG）传感系统中商用数据采集器采样率不足及串行传输机制导致测量频率受限的问题，设计了一种基于FPGA的高速数据采集系统。硬件核心采用Xilinx
@@ -756,12 +756,7 @@ SoC的高速数据采集系统。通过采用采集、判选与发送的流水�
 <p>实测结果表明，该系统具有高刷新率 (19.46 kHz <span class="citation" data-cites="2">@2</span> nm，0.980 kHz <span class="citation" data-cites="40">@40</span> nm)，高信噪比 (70.74 dB)，高波长分辨率 (8
 pm)，高峰值精度(6.34 pm@无算法，0.97
 pm@洛伦兹拟合算法)。同时保持了FBG传感特有的抗电磁干扰，多点准分布式测量的特点，为强干扰环境下机械振动、温度变化以及其他物理量的高频精确测量提供了可靠的电子学解决方案，具有较高的工程应用价值。</p>
-<h2 id="致谢acknowledgement">5 致谢（Acknowledgement）</h2>
-<p>感谢近代物理系赵雷老师、秦家军老师与廖潇宇师兄给予的支持。在与赵老师和秦老师的交流中，确定了该研究"信号延迟标定-数字逻辑设计"的两阶段思路以及主要技术方案。另外，赵雷老师的数字电路课当中关于信号完整性、异步信号、流水线等概念的讲解，直接启发了本方案的多个重要技术细节。廖师兄在信号延迟测试方法、核电子学和快电子学基础知识与设计方法上与作者进行了多次深入探讨，避免了诸多技术弯路。</p>
-<p>同时，衷心感谢物理实验教学中心赵伟老师，王中平老师和曲广媛老师。本研究是去年物理实验竞赛项目的深化与延续，而前期工作正是在三位老师的指导下奠定了坚实基础。在本期工作中，他们继续在实验方案论证、项目展示度与关键的器材支持上提供了不可或缺的帮助。此外，也感谢上一期项目中的合作者李炳杉与曾奕陶同学，他们出色的前期工作是本项目得以顺利推进的重要基石。</p>
-<p>本研究的具体实施由三位同学通力协作完成：张一鸣负责整体结构、硬件电路和以太网发送模块的设计与实现；李宸昱承担了采集判选逻辑的核心开发与数字ASIC版图生成的尝试；李欣泽则完成了上位机软件的编写，测试与数据处理。感谢各位团队成员之间的紧密合作与来自不同专业知识的相互启发。</p>
-<p>在此向各位致以诚挚的谢意。</p>
-<h2 id="参考文献">6 参考文献</h2>
+<h2 id="参考文献">参考文献</h2>
 <p>[1] 饶云江, 王义平, 朱涛. 光纤光栅原理及应用[M]. 北京：科学出版社,
 2006.</p>
 <p>[2] 陈勇, 刘焕淋. 光纤光栅传感技术与应用[M]. 北京：科学出版社,
